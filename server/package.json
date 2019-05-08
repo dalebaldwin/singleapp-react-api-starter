@@ -1,0 +1,34 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "App Server in Node and Express",
+  "main": "index.js",
+  "scripts": {
+    "build-frontend": "cd ../react-app && npm run build",
+    "start": "node index.js",
+    "start-prod-test": "npm run build-frontend && node index.js",
+    "start-nodemon": "cross-env NODE_ENV=dev nodemon index.js",
+    "lint": "eslint src"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/register": "^7.4.4",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "compression": "^1.7.4",
+    "express": "^4.16.4",
+    "express-mongo-db": "^2.0.4",
+    "express-session": "^1.16.1",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-github2": "^0.1.11"
+  }
+}
